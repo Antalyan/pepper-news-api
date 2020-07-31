@@ -1,0 +1,34 @@
+topic: ~Intro_News()
+language: czc
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+concept:(agree) [ano jo "to bych rád" "rád bych" klidně "proč ne"]
+concept:(mytopic) [byznys zábava zdraví sport věda technika]
+concept:(topic6) [byznysu zábavě zdraví sportu vědě technice]
+concept:(none) [ne není "tak různě" "všechno"]
+concept:(no_thanks) [ne nechci] {díky}
+concept:(explain) ["{nechápu nevím netuším} co tím myslíš" "vysvětli {mi to}"]
+concept:(topic_choice) ^repeat{"["chtěl bych" chci] slyšet" "co takhle něco o" "novinky o"}
+concept:(willfind) Tak dobře, chvilku počkej, najdu ti novinky o
+concept:(tell_more) [řekni pověz "chci slyšet" "zajímá mě"] {mi} {"o tom"} {víc}
+concept:(finish) [díky "to je vše" děkuji děkuju "to mě nezajímá"]
+
+u:({"chci slyšet"} {další} novinky) Ahoj, chceš slyšet, co se děje nového?
+    u1:(~agree): Super, je nějaké téma zpráv, které tě zajímá? 
+        u2:(~explain) Umím hledat aktuality o byznysu, zábavě, zdraví, sportu, vědě a technice. A taky všechno najednou, kdyby ses nemohl rozhodnout. ^stayInScope
+        u2:(~topic_choice [byznys byznysu biznis biznisu]) ~willfind byznysu $category=business 
+        u2:(~topic_choice [zábava zábavě]) ~willfind zábavě $category=entertainment
+        u2:(~topic_choice zdraví) ~willfind zdraví $category=health
+        u2:(~topic_choice [sport sportu]) ~willfind sportu $category=sport
+        u2:(~topic_choice [věda vědě]) ~willfind vědě $category=science
+        u2:(~topic_choice [technika technice]) ~willfind technice $category=technology
+        u2:(~none) Tak fajn, chviličku počkej, zkusím najít něco zajímavého $category=""
+    u1:(~no_thanks) Nevadí, tak někdy příště! $onStopped=1

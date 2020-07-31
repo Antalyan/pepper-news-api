@@ -1,0 +1,16 @@
+topic: ~AdditionalInfo()
+language: czc
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+
+u:(e:onStart) Chceš slyšet víc?
+    u1:(~agree) $action = whole
+    u1:(~no_thanks) $action = end

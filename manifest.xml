@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.0" uuid="newstalk-a8466b">
+ <names>
+  <name lang="en_US">Untitled</name>
+ </names>
+ <supportedLanguages>
+  <language>cs_CZ</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>cs_CZ</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <dialogContent topicName="Intro_News" typeVersion="1.0">
+   <topic path="Intro_News/Intro_News_czc.top" language="cs_CZ"/>
+   <topic path="Intro_News/Intro_News_enu.top" language="en_US"/>
+  </dialogContent>
+  <dialogContent topicName="AdditionalInfo" typeVersion="1.0">
+   <topic path="AdditionalInfo/AdditionalInfo_czc.top" language="cs_CZ"/>
+   <topic path="AdditionalInfo/AdditionalInfo_enu.top" language="en_US"/>
+  </dialogContent>
+ </contents>
+</package>
