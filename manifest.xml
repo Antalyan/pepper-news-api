@@ -16,12 +16,15 @@
    <permissions/>
   </behaviorContent>
   <dialogContent topicName="Intro_News" typeVersion="1.0">
-   <topic path="Intro_News/Intro_News_czc.top" language="cs_CZ"/>
-   <topic path="Intro_News/Intro_News_enu.top" language="en_US"/>
+   <topic language="cs_CZ" path="Intro_News/Intro_News_czc.top"/>
+   <topic language="en_US" path="Intro_News/Intro_News_enu.top"/>
   </dialogContent>
   <dialogContent topicName="AdditionalInfo" typeVersion="1.0">
-   <topic path="AdditionalInfo/AdditionalInfo_czc.top" language="cs_CZ"/>
-   <topic path="AdditionalInfo/AdditionalInfo_enu.top" language="en_US"/>
+   <topic language="cs_CZ" path="AdditionalInfo/AdditionalInfo_czc.top"/>
+   <topic language="en_US" path="AdditionalInfo/AdditionalInfo_enu.top"/>
+  </dialogContent>
+  <dialogContent topicName="ErrorDialog" typeVersion="1.0">
+   <topic language="cs_CZ" path="ErrorDialog/ErrorDialog_czc.top"/>
   </dialogContent>
  </contents>
 </package>

@@ -1,4 +1,4 @@
-topic: ~ExampleDialog()
+topic: ~ErrorDialog()
 language: czc
 
 # Defining extra concepts out of words or group of words
@@ -9,3 +9,7 @@ language: czc
 
 # Replying to speech
 #u:(~hello) ~hello
+
+u:(e:onStart) Je mi líto, ale nic jsem nenašel.
+    u:(~try_again) Dobře, zkusím to ještě jednou. $again=1
+    u:(~refuse) Snad příště $onStopped=1

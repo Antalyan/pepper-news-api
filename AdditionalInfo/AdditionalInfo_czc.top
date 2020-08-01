@@ -10,7 +10,6 @@ language: czc
 # Replying to speech
 #u:(~hello) ~hello
 
-
-u:(e:onStart) Chceš slyšet víc?
-    u1:(~agree) $action = whole
-    u1:(~no_thanks) $action = end
+u:(~tell_more) $onStopped = whole
+u:(~something_else) $onStopped = next
+u:(~finish) $onStopped = end
