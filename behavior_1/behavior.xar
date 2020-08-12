@@ -132,12 +132,11 @@ class MyClass(GeneratedClass):
         source = self.get_source()
 
         try:
-            tabletService = session.service("ALTabletService")
-            tabletService.enableWifi()
+            tabletService = self.session().service("ALTabletService")
             tabletService.showWebview(self.get_url_image())
         except Exception:
+            self.logger.error(e)
             self.logger.error("cannot display image with url {}".format(self.get_url_image()))
-
         if not source:
             self.tts.say((u"Píšou tohle. " + desc).encode('utf-8'))
         else:
